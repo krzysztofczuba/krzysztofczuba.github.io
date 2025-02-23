@@ -129,10 +129,10 @@ footer {
 }
 
 .service-logo {
-    width: 50px; /* Adjust the size of the logo as needed */
+    width: 150px;
     height: auto;
     display: block;
-    margin: 0 auto 10px; /* Center the logo and add some space below it */
+    margin: 0 auto 10px;
 }
 
 .projects {
@@ -184,9 +184,17 @@ footer {
 .experience-container {
     display: flex;
     justify-content: space-between;
+    text-align: justify;
     margin: 0 auto;
     max-width: 600px;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.takeaway-box {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .testimonial-item {
@@ -284,6 +292,7 @@ footer a {
 .footer-container {
     display: flex;
     justify-content: flex-start;
+    min-height: 500px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
