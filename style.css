@@ -63,6 +63,16 @@ p.mar {
     font-weight: bold;
 }
 
+.calendar-link {
+    background-color: #0056b3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
 .hero {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -198,6 +208,7 @@ footer {
 }
 
 .questions-container {
+    display: flex;
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 25px;
@@ -212,6 +223,13 @@ footer {
     column-gap: 40px; /* Adjust spacing between columns */
 }
 
+.questions-list-item {
+    display: flex;
+    align-items: center;
+    break-inside: avoid; /* Prevents breaking inside an item */
+    margin-bottom: 15px;
+}
+
 .questions-list-item i {
     margin-right: 15px;
     color: #0056b3;
@@ -221,13 +239,6 @@ footer {
     font-size: 1.2em; /* Adjust size as needed */
     text-align: left;
     /* color: #333; */
-}
-
-.questions-list-item {
-    display: flex;
-    align-items: center;
-    break-inside: avoid; /* Prevents breaking inside an item */
-    margin-bottom: 15px;
 }
 
 .offer {
@@ -264,6 +275,10 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: left;
+}
+
+footer a {
+    color: white;
 }
 
 .footer-container {
@@ -309,7 +324,15 @@ footer p {
 
 
 /* Media queries for responsive design */
-@media (max-width: 500px) {
+@media (min-width: 768px) {
+    .calendar-widget { display: block; } /* Show widget */
+    .calendar-link { display: none; } /* Hide link */
+}
+
+@media (max-width: 767px) {
+    .calendar-widget { display: none; } /* Hide widget */
+    .calendar-link { display: block; } /* Show link */
+
     nav ul li:not(:last-child) {
         display: none; /* Hide all navigation items except the last one */
     }
@@ -319,7 +342,11 @@ footer p {
         align-items: center;
     }
 
-    .services-container, .testimonials-container, .projects-container {
+    .questions-list {
+        column-count: 1;
+    }
+
+    .services-container, .testimonials-container, .projects-container, .questions-container {
         flex-direction: column;
         align-items: center;
     }
