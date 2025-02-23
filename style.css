@@ -325,13 +325,13 @@ footer p {
 
 /* Media queries for responsive design */
 @media (min-width: 768px) {
-    .calendar-widget { display: block; } /* Show widget */
-    .calendar-link { display: none; } /* Hide link */
+    .calendar-widget { display: block; } 
+    .calendar-link { display: none; }
 }
 
 @media (max-width: 767px) {
-    .calendar-widget { display: none; } /* Hide widget */
-    .calendar-link { display: block; } /* Show link */
+    .calendar-widget { display: none; }
+    .calendar-link { display: block; } Show link
 
     nav ul li:not(:last-child) {
         display: none; /* Hide all navigation items except the last one */
