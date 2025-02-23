@@ -148,6 +148,11 @@ footer {
     text-align: left;
     min-width: 250px; /* Ensure minimum width for smaller screens */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: center; /* Ensures text inside is centered */
+}
+
+.project-item p {
+    flex: 1;
 }
 
 .project-logo {
